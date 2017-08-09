@@ -1,27 +1,27 @@
-require 'coin_changer.rb'
+require "coin_changer.rb"
 
 describe CoinChanger do
-  it "gives me a penny when i need a cent" do
-    expect(CoinChanger.new.gimme_cash(1)).to eq([1])
+  it "gives me a penny for one cent" do
+    expect(CoinChanger.new.cash_back(1)).to eq([1])
   end
   
-  it "gives me two pennies when i need two pennies" do
-    expect(CoinChanger.new.gimme_cash(2)).to eq([1, 1])
+  it "gives me two pennies for two cents" do
+    expect(CoinChanger.new.cash_back(2)).to eq([1, 1])
   end
   
-  it "gives me a nickel when i need a nickel" do
-    expect(CoinChanger.new.gimme_cash(5)).to eq([5])
+  it "gives me a nickel for five cents" do
+    expect(CoinChanger.new.cash_back(5)).to eq([5])
   end
   
-  it "gives me a nickel and two pennies when i need 7 cents" do
-    expect(CoinChanger.new.gimme_cash(7)).to eq([5, 1, 1])
+  it "gives me a nickel and two pennies for seven cents" do
+    expect(CoinChanger.new.cash_back(7)).to eq([5, 1, 1])
   end
   
-  it "gives me a dime when i need a dang dime" do
-    expect(CoinChanger.new.gimme_cash(10)).to eq([10])
+  it "gives me a dime for 10 cents" do
+    expect(CoinChanger.new.cash_back(10)).to eq([10])
   end
   
-  it "gives me a quarter when i need a quarter" do
-    expect(CoinChanger.new.gimme_cash(25)).to eq([25])
+  it "gives me a quarter for 25 cents" do
+    expect(CoinChanger.new.cash_back(25)).to eq([25])
   end
 end

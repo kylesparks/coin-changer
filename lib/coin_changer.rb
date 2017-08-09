@@ -1,5 +1,5 @@
 class CoinChanger
-  def gimme_cash(amount)
+  def cash_back(amount)
     change = []
     coins = [25, 10, 5, 1]
 
@@ -9,6 +9,7 @@ class CoinChanger
         amount = amount - coin
       end
     end
-  change
+      
+    change
   end
 end
