@@ -1,14 +1,14 @@
 class CoinChanger
-  def change_back(amount)
+  def money_back(amount)
     change = []
-    coins = [25, 10, 5, 1]
+    coins = [10, 5, 1]
     
-    coins.each do |coin|
-      until amount < coin
-        change << coin
-        amount = amount - coin
+    coins.each do |circle|
+      until amount < circle
+        change << circle
+        amount = amount - circle
       end
     end
-change
+    change
+    end    
   end
-end
